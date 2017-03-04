@@ -14,4 +14,4 @@ Yet another tweak is the Shooting skill effects a how fast a pawn can reload a w
 
 By default and changes to the weapons and ammo change the balance of this mod compare to that of Combat Realism.  This means some weapon may be just better than other in certain roles (which is true in the really word). The cost of the weapons and ammo in terms of silver, the work to make and stuff used to make them has also change to be more in line with the way items are priced in vanilla Rimworld, as well as a way to balance out the weapons, meaning that weapons that are "better" tend to cost more when compared to one another (Note feedback on this is needed).
 
-Full Credit to NoImageAvailable, skyarkhangel and anyone else who helped make and maintain the Combat Realism mod. Without them i would not have made this mod and would have missed out on the many hours spend playing Rimworld with their mod Thank you =)
+Full Credit to NoImageAvailable, skyarkhangel and anyone else who helped make and maintain the Combat Realism mod. Without them I would not have made this mod and would have missed out on the many hours spend playing Rimworld with their mod Thank you =)
