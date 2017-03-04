@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+
+	<!-- ================== .40 Rimfire ================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_40Rimfire</defName>
+		<label>.40 Rimfire bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<speed>71</speed>
+			<damageAmountBase>6</damageAmountBase>
+			<armorPenetration>0.1</armorPenetration>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<!-- ================== .32 ACP ================== -->
+
+	<ThingDef Name="Base32ACPBullet" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<speed>64</speed>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base32ACPBullet">
+		<defName>Bullet_32ACP_FMJ</defName>
+		<label>.32 ACP bullet (FMJ)</label>
+		<projectile>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetration>0.16</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base32ACPBullet">
+		<defName>Bullet_32ACP_AP</defName>
+		<label>.32 ACP bullet (AP)</label>
+		<projectile>
+			<damageAmountBase>4</damageAmountBase>
+			<armorPenetration>0.198</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base32ACPBullet">
+		<defName>Bullet_32ACP_HP</defName>
+		<label>.32 ACP bullet (HP)</label>
+		<projectile>
+			<damageAmountBase>6</damageAmountBase>
+			<armorPenetration>0.118</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<!-- ================== 7.62x25mm Tokarev ================== -->
+
+	<ThingDef Name="Base762x25mmTokarevBullet" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<speed>105</speed>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base762x25mmTokarevBullet">
+		<defName>Bullet_762x25mmTokarev_FMJ</defName>
+		<label>7.62mm Tokarev bullet (FMJ)</label>
+		<projectile>
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetration>0.317</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base762x25mmTokarevBullet">
+		<defName>Bullet_762x25mmTokarev_AP</defName>
+		<label>7.62mm Tokarev bullet (AP)</label>
+		<projectile>
+			<damageAmountBase>7</damageAmountBase>
+			<armorPenetration>0.393</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base762x25mmTokarevBullet">
+		<defName>Bullet_762x25mmTokarev_HP</defName>
+		<label>7.62mm Tokarev bullet (HP)</label>
+		<projectile>
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetration>0.235</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<!-- ================== 9x19mm Parabellum ================== -->
+
+	<ThingDef Name="Base9x19mmParaBullet" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<speed>78</speed>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base9x19mmParaBullet">
+		<defName>Bullet_9x19mmPara_FMJ</defName>
+		<label>9mm Para bullet (FMJ)</label>
+		<projectile>
+			<damageAmountBase>9</damageAmountBase>
+			<armorPenetration>0.298</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base9x19mmParaBullet">
+		<defName>Bullet_9x19mmPara_AP</defName>
+		<label>9mm Para bullet (AP)</label>
+		<projectile>
+			<damageAmountBase>7</damageAmountBase>
+			<armorPenetration>0.370</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base9x19mmParaBullet">
+		<defName>Bullet_9x19mmPara_HP</defName>
+		<label>9mm Para bullet (HP)</label>
+		<projectile>
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetration>0.221</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<!-- ================== .45 ACP ================== -->
+
+	<ThingDef Name="Base45ACPBullet" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<speed>50</speed>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base45ACPBullet">
+		<defName>Bullet_45ACP_FMJ</defName>
+		<label>.45 ACP bullet (FMJ)</label>
+		<projectile>
+			<damageAmountBase>11</damageAmountBase>
+			<armorPenetration>0.265</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base45ACPBullet">
+		<defName>Bullet_45ACP_AP</defName>
+		<label>.45 ACP bullet (AP)</label>
+		<projectile>
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetration>0.329</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base45ACPBullet">
+		<defName>Bullet_45ACP_HP</defName>
+		<label>.45 ACP bullet (HP)</label>
+		<projectile>
+			<damageAmountBase>14</damageAmountBase>
+			<armorPenetration>0.196</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<!-- ================== .45 Colt ================== -->
+
+	<ThingDef Name="Base45ColtBullet" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<speed>58</speed>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base45ColtBullet">
+		<defName>Bullet_45Colt_FMJ</defName>
+		<label>.45 Colt bullet (FMJ)</label>
+		<projectile>
+			<damageAmountBase>13</damageAmountBase>
+			<armorPenetration>0.308</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base45ColtBullet">
+		<defName>Bullet_45Colt_AP</defName>
+		<label>.45 Colt bullet (AP)</label>
+		<projectile>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetration>0.381</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base45ColtBullet">
+		<defName>Bullet_45Colt_HP</defName>
+		<label>.45 Colt bullet (HP)</label>
+		<projectile>
+			<damageAmountBase>16</damageAmountBase>
+			<armorPenetration>0.227</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+
+</ThingDefs>

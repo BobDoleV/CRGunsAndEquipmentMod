@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingCategoryDefs>
+
+    <ThingCategoryDef>
+      <defName>AmmoPistols</defName>
+      <label>pistol</label>
+      <parent>Ammo</parent>
+    </ThingCategoryDef>
+
+	<ThingCategoryDef>
+      <defName>Ammo22LR</defName>
+      <label>.22 Long Rifle</label>
+      <parent>AmmoPistols</parent>
+    </ThingCategoryDef>	
+	
+    <ThingCategoryDef>
+      <defName>Ammo357Mag</defName>
+      <label>.357 Magnum</label>
+      <parent>AmmoPistols</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>Ammo44Mag</defName>
+      <label>.44 Magnum</label>
+      <parent>AmmoPistols</parent>
+    </ThingCategoryDef>
+
+    
+</ThingCategoryDefs>

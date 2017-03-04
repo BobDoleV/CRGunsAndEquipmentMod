@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+   <ThingDef Name="ApparelCarryGearBase" Abstract="True">
+    <thingClass>Apparel</thingClass>
+    <techLevel>Industrial</techLevel>
+    <category>Item</category>
+    <selectable>True</selectable>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <!--
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+      -->
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+    </recipeMaker>
+    <thingCategories>
+      <li>Loadout</li>
+    </thingCategories>
+  </ThingDef>
+
+  <!-- ============= Stuffed apparel =================-->
+
+  <ThingDef ParentName="ApparelCarryGearBase">
+    <defName>Apparel_TacVest</defName>
+    <label>tactical vest</label>
+    <ThingClass>Combat_Realism.Apparel_TacVest</ThingClass>
+    <description>A loadbearing vest with a number of pouches to store magazines and other equipment.\n\nSpeeds up reloading but is quite bulky to wear.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Tacvest/TacRigging</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<costStuffCount>60</costStuffCount>
+	<stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <MarketValue>125</MarketValue>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>2</Mass>
+      <Bulk>10</Bulk>
+      <WornWeight>2</WornWeight>
+      <WornBulk>5</WornBulk>
+    </statBases>
+    <equippedStatOffsets>
+      <CarryBulk>20</CarryBulk>
+      <ReloadSpeed>0.1</ReloadSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+	  <worngraphicPath>Things/Apparel/Tacvest/TacRigging</worngraphicPath>
+      <layers>
+        <li>Accessory</li>
+      </layers>
+      <commonality>1</commonality>
+      <tags>
+        <li>Outlander</li>
+        <li>Military</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+	<colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+
+  <ThingDef ParentName="ApparelCarryGearBase">
+    <defName>Apparel_Backpack</defName>
+    <label>Hiking Backpack</label>
+    <ThingClass>Combat_Realism.Apparel_Backpack</ThingClass>
+    <description>A comfortable and spacious backpack for storing all kinds of items when you are walking or climbing..</description>
+    <graphicData>
+      <texPath>Things/Apparel/HikeBackpack/Milpack</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<costStuffCount>80</costStuffCount>
+	<stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <MarketValue>250</MarketValue>
+      <WorkToMake>16000</WorkToMake>
+      <Mass>1.5</Mass>
+      <Bulk>5</Bulk>
+      <WornWeight>1.5</WornWeight>
+    </statBases>
+    <equippedStatOffsets>
+	  <CarryWeight>8</CarryWeight>
+      <CarryBulk>30</CarryBulk>
+    </equippedStatOffsets>
+    <costList>
+	  <Steel>10</Steel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+	  <worngraphicPath>Things/Apparel/HikeBackpack/Milpack</worngraphicPath>
+      <layers>
+        <li>Accessory</li>
+      </layers>
+      <commonality>1</commonality>
+      <tags>
+        <li>Outlander</li>
+        <li>Military</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+	<colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+
+  <ThingDef ParentName="ApparelCarryGearBase">
+    <defName>Apparel_BackpackRegular</defName>
+    <label>Backpack</label>
+    <ThingClass>Combat_Realism.Apparel_Backpack</ThingClass>
+    <description>A backpack is a bag with straps that go over your shoulders, so that you can carry things on your back.</description>
+    <graphicData>
+      <texPath>Things/Apparel/BackpackReg/BackpackReg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<costStuffCount>60</costStuffCount>
+	<stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>125</MarketValue>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>1</Mass>
+      <Bulk>3</Bulk>
+      <WornWeight>1</WornWeight>
+    </statBases>
+    <equippedStatOffsets>
+	  <CarryWeight>4</CarryWeight>
+      <CarryBulk>20</CarryBulk>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+	  <worngraphicPath>Things/Apparel/BackpackReg/BackpackReg</worngraphicPath>
+      <layers>
+        <li>Accessory</li>
+      </layers>
+      <commonality>1</commonality>
+      <tags>
+        <li>Outlander</li>
+        <li>Military</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+	<colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+
+</ThingDefs>

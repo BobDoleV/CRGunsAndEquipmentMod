@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<RecipeDef>
+    <defName>RefineNeutroglycerin</defName>
+    <label>make neutroamine</label>
+    <description>Make neutroamine from FXS.</description>
+    <jobString>Making neutroamine.</jobString>
+    <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1500</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Neutroamine>1</Neutroamine>
+    </products>
+    <workSkill>Crafting</workSkill>
+	<researchPrerequisite>DrugProduction</researchPrerequisite>
+	<skillRequirements>
+      <li>
+        <skill>Crafting</skill>
+        <minLevel>8</minLevel>
+      </li>
+	</skillRequirements>
+    <recipeUsers>
+      <li>DrugLab</li>
+    </recipeUsers>
+  </RecipeDef>
+
+  
+  
+</Defs>

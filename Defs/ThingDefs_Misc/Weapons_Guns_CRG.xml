@@ -1,0 +1,1900 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+
+
+
+
+
+  <!-- ==================== T-12 incendiary launcher ========================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_T-12_CRG</defName>
+    <label>T-12</label>
+    <description>T-12 Incendiary bolt launcher Module (IBLM) is a single-shot 30 mm incendiaary fuel cell launcher system.  The T-12 was designed as a compact version of the standard T-9 Incendiary bolt launcher.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_T-12</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <MarketValue>430</MarketValue>
+      <AimEfficiency>0.50</AimEfficiency>
+      <ShotSpread>0.18</ShotSpread>
+      <SwayFactor>1.75</SwayFactor>
+      <Bulk>4.8</Bulk>
+      <Mass>2.3</Mass>
+      <RangedWeapon_Cooldown>.42</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>90</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_30x64mmFuel_Incendiary</projectileDef>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <warmupTime>70</warmupTime>
+        <range>43</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>ShotIncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>1</magazineSize>
+		<reloadTicks>150</reloadTicks>
+		<ammoSet>AmmoSet_30x64mmFuel</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+ 
+ <!-- ==================== M320 Grenade Launcher ========================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_M320_CRG</defName>
+    <label>M320</label>
+    <description>M320 Grenade Launcher Module (GLM) is a single-shot 40 mm grenade launcher system</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_M320</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>10500</WorkToMake>
+      <MarketValue>800</MarketValue>
+      <AimEfficiency>0.50</AimEfficiency>
+      <ShotSpread>0.19</ShotSpread>
+      <SwayFactor>1.74</SwayFactor>
+      <Bulk>4.76</Bulk>
+      <Mass>2.2</Mass>
+      <RangedWeapon_Cooldown>.42</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>90</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_40x46mmGrenade_HE</projectileDef>
+        <warmupTime>70</warmupTime>
+        <range>40</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>ShotIncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>1</magazineSize>
+		<reloadTicks>150</reloadTicks>
+		<ammoSet>AmmoSet_40x46mmGrenade</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+
+   <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Hi-Power_CRG</defName>
+    <label>Hi-Power</label>
+    <description>Ancient pattern automatic pistol. Weak and short range, but quick.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_Hi-Power</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>17665</WorkToMake>
+	  <AimEfficiency>0.35</AimEfficiency>
+	  <ShotSpread>0.17</ShotSpread>
+	  <SwayFactor>1.30</SwayFactor>
+      <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+	  <Bulk>1.97</Bulk>
+	  <Mass>1.0</Mass>
+    </statBases>
+    <costList>
+      <Steel>25</Steel>
+      <Component>2</Component>
+    </costList>
+    <weaponTags>
+      <li>CR_Sidearm</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_9x19mmPara_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>10</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>13</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_9x19mmPara</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_TT_CRG</defName>
+    <label>TT</label>
+    <description>The TT is a Russian semi-automatic pistol. It was developed in the early 1930s by Fedor Tokarev as a service pistol for the Soviet military to replace the Nagant M1895 revolver.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_TT</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>18200</WorkToMake>
+	  <AimEfficiency>0.35</AimEfficiency>
+	  <ShotSpread>0.17</ShotSpread>
+	  <SwayFactor>1.28</SwayFactor>
+      <RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
+	  <Bulk>1.94</Bulk>
+	  <Mass>.85</Mass>
+    </statBases>
+    <costList>
+      <Steel>24</Steel>
+      <Component>2</Component>
+    </costList>
+    <weaponTags>
+      <li>CR_Sidearm</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x25mmTokarev_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>10</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>8</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+   <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_WaltherPPK_CRG</defName>
+    <label>Walther PPK</label>
+    <description>The Walther PPK is a smaller version of the PP making it more concealable than the original PP</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_WaltherPPK</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>12190</WorkToMake>
+	  <AimEfficiency>0.35</AimEfficiency>
+	  <ShotSpread>0.19</ShotSpread>
+	  <SwayFactor>1.21</SwayFactor>
+      <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+	  <Bulk>1.55</Bulk>
+	  <Mass>.59</Mass>
+    </statBases>
+    <costList>
+      <Steel>23</Steel>
+      <Component>2</Component>
+    </costList>
+    <weaponTags>
+      <li>CR_Sidearm</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_32ACP_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>10</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>7</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_32ACP</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+ <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_RugerMarkIV_CRG</defName>
+    <label>Ruger Mark IV</label>
+    <description>Ancient pattern automatic pistol. Weak and short range, but quick.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_RugerMarkIV</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>12190</WorkToMake>
+	  <AimEfficiency>0.35</AimEfficiency>
+	  <ShotSpread>0.15</ShotSpread>
+	  <SwayFactor>1.41</SwayFactor>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+	  <Bulk>2.82</Bulk>
+	  <Mass>1.25</Mass>
+    </statBases>
+    <costList>
+      <Steel>29</Steel>
+      <Component>2</Component>
+    </costList>
+    <weaponTags>
+      <li>CR_Sidearm</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_22LR_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>10</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>10</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_22LR</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+    
+   <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Blackhawk_CRG</defName>
+    <label>Blackhawk</label>
+    <description>The Ruger Blackhawk is a 6-shot, single-action revolver manufactured by Ruger.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_Blackhawk</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>16350</WorkToMake>
+	  <AimEfficiency>0.35</AimEfficiency>
+	  <ShotSpread>0.15</ShotSpread>
+	  <SwayFactor>1.45</SwayFactor>
+      <RangedWeapon_Cooldown>0.88</RangedWeapon_Cooldown>
+	  <Bulk>3.14</Bulk>
+	  <Mass>1.36</Mass>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <Component>1</Component>
+    </costList>
+    <weaponTags>
+      <li>CR_Sidearm</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_357Mag_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>10</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>6</magazineSize>
+		<reloadTicks>360</reloadTicks>
+		<ammoSet>AmmoSet_357Mag</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+    <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_SuperBlackhawk_CRG</defName>
+    <label>Super Blackhawk</label>
+    <description>The Ruger Super Blackhawk is a 6-shot .44 Magnum, single-action revolver manufactured by Ruger.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_SuperBlackhawk</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>19033</WorkToMake>
+	  <AimEfficiency>0.35</AimEfficiency>
+	  <ShotSpread>0.14</ShotSpread>
+	  <SwayFactor>1.48</SwayFactor>
+      <RangedWeapon_Cooldown>0.89</RangedWeapon_Cooldown>
+	  <Bulk>3.4</Bulk>
+	  <Mass>1.36</Mass>
+    </statBases>
+    <costList>
+      <Steel>31</Steel>
+      <Component>1</Component>
+    </costList>
+    <weaponTags>
+      <li>CR_Sidearm</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_44Mag_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>10</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>6</magazineSize>
+		<reloadTicks>360</reloadTicks>
+		<ammoSet>AmmoSet_44Mag</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+    <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_SWModel27_CRG</defName>
+    <label>S W Model 27</label>
+    <description>The Smith and Wesson Model 27 is the original .357 Magnum revolver. It was first produced in 1935, and was built on Smith and Wesson's carbon steel, large N-frame</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_SWModel27</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>17100</WorkToMake>
+	  <AimEfficiency>0.35</AimEfficiency>
+	  <ShotSpread>0.15</ShotSpread>
+	  <SwayFactor>1.44</SwayFactor>
+      <RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
+	  <Bulk>3.05</Bulk>
+	  <Mass>1.33</Mass>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <Component>1</Component>
+    </costList>
+    <weaponTags>
+      <li>CR_Sidearm</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_357Mag_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>10</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>6</magazineSize>
+		<reloadTicks>265</reloadTicks>
+		<ammoSet>AmmoSet_357Mag</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+ <!-- ============================================================== -->
+ 
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_SWModel29_CRG</defName>
+    <label>S W Model 29</label>
+    <description>The Smith and Wesson Model 29 is a six-shot, double-action revolver chambered for the .44 Magnum cartridge and manufactured by the U.S. company Smith and Wesson.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_SWModel29</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>19658</WorkToMake>
+	  <AimEfficiency>0.35</AimEfficiency>
+	  <ShotSpread>0.15</ShotSpread>
+	  <SwayFactor>1.44</SwayFactor>
+      <RangedWeapon_Cooldown>0.39</RangedWeapon_Cooldown>
+	  <Bulk>3.05</Bulk>
+	  <Mass>1.35</Mass>
+    </statBases>
+    <costList>
+      <Steel>30</Steel>
+      <Component>1</Component>
+    </costList>
+    <weaponTags>
+      <li>CR_Sidearm</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_357Mag_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>10</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>6</magazineSize>
+		<reloadTicks>265</reloadTicks>
+		<ammoSet>AmmoSet_357Mag</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+   <!-- ============================================================== -->
+ 
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_TaurusJudge_CRG</defName>
+    <label>Taurus Judge</label>
+    <description>The Taurus Judge is a five shot revolver designed and produced by Taurus International, chambered for .410 bore shot shells and the .45 Colt cartridge.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_TaurusJudge</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>17033</WorkToMake>
+	  <AimEfficiency>0.35</AimEfficiency>
+	  <ShotSpread>0.18</ShotSpread>
+	  <SwayFactor>1.39</SwayFactor>
+      <RangedWeapon_Cooldown>0.46</RangedWeapon_Cooldown>
+	  <Bulk>2.79</Bulk>
+	  <Mass>1.09</Mass>
+    </statBases>
+    <costList>
+      <Steel>28</Steel>
+      <Component>2</Component>
+    </costList>
+    <weaponTags>
+      <li>CR_Sidearm</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_45Colt_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>10</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>5</magazineSize>
+		<reloadTicks>265</reloadTicks>
+		<ammoSet>AmmoSet_410Bore</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+ <!-- ============================================================== -->
+ 
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Mossberg_CRG</defName>
+    <label>Mossberg 500</label>
+    <description>Mossberg 500 is a series of pump action shotguns manufactured by O.F. Mossberg and Sons.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_Mossberg</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractShotgun</soundInteract>
+    <statBases>
+      <WorkToMake>32151</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.5</ShotSpread>
+	  <SwayFactor>1.38</SwayFactor>
+	  <Bulk>10.41</Bulk>
+	  <Mass>3.2</Mass>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>61</Steel>
+      <Component>1</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_12Gauge_Buck</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>15</range>
+        <soundCast>ShotShotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>9</magazineSize>
+		<reloadTicks>540</reloadTicks>
+		<ammoSet>AmmoSet_12Gauge</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+   <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Benelli_M4_CRG</defName>
+    <label>Benelli M4</label>
+    <description>The Benelli M4 is a semi-automatic shotgun manufactured by Benelli Armi SpA.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_BenelliM4</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractShotgun</soundInteract>
+    <statBases>
+      <WorkToMake>34276</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.5</ShotSpread>
+	  <SwayFactor>1.27</SwayFactor>
+	  <Bulk>8.85</Bulk>
+	  <Mass>3.82</Mass>
+      <RangedWeapon_Cooldown>.39</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>58</Steel>
+      <Component>2</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_12Gauge_Buck</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>15</range>
+        <soundCast>ShotShotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>8</magazineSize>
+		<reloadTicks>480</reloadTicks>
+		<ammoSet>AmmoSet_12Gauge</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Marlin1894_CRG</defName>
+    <label>Marlin 1894</label>
+    <description>The Marlin Model 1894 is a lever-action repeating rifle introduced in 1894 by the Marlin Firearms.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_Marlin1894</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>23071</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.07</ShotSpread>
+	  <SwayFactor>1.25</SwayFactor>
+	  <Bulk>9.53</Bulk>
+	  <Mass>2.95</Mass>
+      <RangedWeapon_Cooldown>.77</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>43</Steel>
+	  <WoodLog>9</WoodLog>
+      <Component>1</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_44Mag_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>25</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>11</magazineSize>
+		<reloadTicks>660</reloadTicks>
+		<ammoSet>AmmoSet_44Mag</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+  <!-- ============================================== -->
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Winchester92_CRG</defName>
+    <label>Winchester 92</label>
+    <description>The Winchester Model 1892 was a lever-action repeating rifle designed by John Browning as a smaller, lighter version of his large-frame Model 1886</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_Winchester92</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>20513</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.07</ShotSpread>
+	  <SwayFactor>1.22</SwayFactor>
+	  <Bulk>9.52</Bulk>
+	  <Mass>2.72</Mass>
+      <RangedWeapon_Cooldown>.76</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>43</Steel>
+	  <WoodLog>9</WoodLog>
+      <Component>1</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_357Mag_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>25</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>12</magazineSize>
+		<reloadTicks>720</reloadTicks>
+		<ammoSet>AmmoSet_357Mag</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_MosinNagant</defName>
+    <label>Mosin–Nagant</label>
+    <description>The Mosin–Nagant is a five-shot, bolt-action, internal magazine–fed, rifle.  It is one of the most mass-produced military bolt-action rifles in history.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_MosinNagant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>32673</WorkToMake>
+      <AimEfficiency>0.50</AimEfficiency>
+      <ShotSpread>0.02</ShotSpread>
+      <SwayFactor>1.63</SwayFactor>
+      <Bulk>12.32</Bulk>
+      <Mass>4</Mass>
+      <RangedWeapon_Cooldown>1.17</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>49</Steel>
+	  <WoodLog>14</WoodLog>
+      <Component>1</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x54mmR_FMJ</projectileDef>
+        <warmupTime>.9</warmupTime>
+        <range>55</range>
+        <soundCast>ShotSurvivalRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>5</magazineSize>
+		<reloadTicks>255</reloadTicks>
+		<ammoSet>AmmoSet_762x54mmR</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  <!-- ============================================== -->
+  
+  
+  
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_TRG-42_CRG</defName>
+    <label>TRG-42</label>
+    <description>Sako TRG-22/42 sniper rifles were developed by firearm manufacturer SAKO. The TRG-42 is designed to fire the powerful .338 Lapua Magnum.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_TRG-42</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>46900</WorkToMake>
+      <AimEfficiency>1.4</AimEfficiency>
+      <ShotSpread>0.03</ShotSpread>
+      <SwayFactor>1.75</SwayFactor>
+      <Bulk>12</Bulk>
+      <Mass>5.1</Mass>
+      <RangedWeapon_Cooldown>1.18</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>73</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_338Lapua_FMJ</projectileDef>
+        <warmupTime>2</warmupTime>
+        <range>155</range>
+         <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>10</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_338Lapua</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+<!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Tac-50_CRG</defName>
+    <label>Tac-50</label>
+    <description>The Tac-50 is a military and law enforcement weapon, it is the standard Long Range Sniper Weapon (LRSW) of the Canadian Forces</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_Tac-50</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>53883</WorkToMake>
+      <AimEfficiency>1.4</AimEfficiency>
+      <ShotSpread>0.02</ShotSpread>
+      <SwayFactor>2.66</SwayFactor>
+      <Bulk>14.48</Bulk>
+      <Mass>11.8</Mass>
+      <RangedWeapon_Cooldown>1.18</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>104</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_50BMG_FMJ</projectileDef>
+        <warmupTime>2</warmupTime>
+        <range>185</range>
+         <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>5</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_50BMG</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Marlin60_CRG</defName>
+    <label>Marlin Model 60</label>
+    <description>The Marlin Model 60, also known as the Marlin Glenfield Model 60, is a semi-automatic rifle that fires the .22 LR rimfire cartridge. </description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_Marlin60</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>18315</WorkToMake>
+	  <AimEfficiency>0.80</AimEfficiency>
+	  <ShotSpread>0.06</ShotSpread>
+	  <SwayFactor>1.32</SwayFactor>
+      <RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
+	  <Bulk>10.29</Bulk>
+	  <Mass>2.5</Mass>
+    </statBases>
+    <costList>
+      <Steel>40</Steel>
+	  <WoodLog>12</WoodLog>
+      <Component>3</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_22LR_FMJ</projectileDef>
+        <warmupTime>.7</warmupTime>
+        <range>15</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>18</magazineSize>
+		<reloadTicks>1080</reloadTicks>
+		<ammoSet>AmmoSet_22LR</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+   
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Ruger1022_CRG</defName>
+    <label>Ruger 10/22</label>
+    <description>The Ruger 10/22 is a semi-automatic rimfire rifle chambered in .22 Long Rifle. It has a removable 10-round rotary magazine which allows the magazine to fit flush with the bottom of the stock.  </description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_Ruger1022</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>16190</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.07</ShotSpread>
+	  <SwayFactor>1.17</SwayFactor>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+	  <Bulk>9.4</Bulk>
+	  <Mass>2.3</Mass>
+    </statBases>
+    <costList>
+      <Steel>55</Steel>
+      <Component>2</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_22LR_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>15</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>10</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_22LR</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+   
+      <!-- ============================================================== -->
+ 
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_CircuitJudge_CRG</defName>
+    <label>Circuit Judge</label>
+    <description>The Circuit Judge is a 18.5in barrelled carbine variant of the Taurus Judge revolver.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_CircuitJudge</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>20608</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.07</ShotSpread>
+	  <SwayFactor>1.37</SwayFactor>
+      <RangedWeapon_Cooldown>0.46</RangedWeapon_Cooldown>
+	  <Bulk>9.04</Bulk>
+	  <Mass>2.02</Mass>
+    </statBases>
+    <costList>
+      <Steel>41</Steel>
+	  <WoodLog>8</WoodLog>
+      <Component>2</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_45Colt_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>20</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>5</magazineSize>
+		<reloadTicks>265</reloadTicks>
+		<ammoSet>AmmoSet_410Bore</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+   
+ <!-- ============================================== -->
+
+ 
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_SKS_CRG</defName>
+    <label>SKS</label>
+    <description>Soviet semi-automatic carbine chambered for the 7.62×39mm round, designed in 1943 by Sergei Gavrilovich Simonov</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_SKS</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>31475</WorkToMake>
+      <MarketValue>625</MarketValue>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.06</ShotSpread>
+	  <SwayFactor>1.41</SwayFactor>
+	  <Bulk>10.2</Bulk>
+	  <Mass>3.85</Mass>
+          <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>43</Steel>
+	  <WoodLog>13</WoodLog>
+      <Component>2</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x39mmSoviet_FMJ</projectileDef>
+       <warmupTime>.9</warmupTime>
+        <range>45</range>
+        <soundCast>ShotSurvivalRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>10</magazineSize>
+		<reloadTicks>255</reloadTicks>
+		<ammoSet>AmmoSet_762x39mmSoviet</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+  
+    <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_SVD</defName>
+    <label>SVD</label>
+    <description>The Dragunov sniper rifle was designed as a squad support weapon to give a squad an effect weapon to engage long range targets.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_SVD</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>35660</WorkToMake>
+      <AimEfficiency>0.80</AimEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>1.70</SwayFactor>
+      <Bulk>12.25</Bulk>
+      <Mass>4.3</Mass>
+      <RangedWeapon_Cooldown>.37</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>55</Steel>
+	  <WoodLog>11</WoodLog>
+      <Component>2</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x54mmR_FMJ</projectileDef>
+        <warmupTime>1.4</warmupTime>
+        <range>85</range>
+        <soundCast>ShotSurvivalRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>10</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_762x54mmR</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_AK-47_CRG</defName>
+    <label>AK-47</label>
+    <description>The AK-47, or AK as it is officially known (also known as the Kalashnikov) is a selective-fire (semi-automatic and automatic), gas-operated 7.62×39 mm assault rifle, developed in the Soviet Union by Mikhail Kalashnikov.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_AK-47</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>37875</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.08</ShotSpread>
+	  <SwayFactor>1.19</SwayFactor>
+	  <Bulk>8.8</Bulk>
+	  <Mass>3.47</Mass>
+      <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>43</Steel>
+	  <WoodLog>9</WoodLog>	  
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+		<recoilPattern>Regular</recoilPattern>
+		<recoilAmount>1.36</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x39mmSoviet_FMJ</projectileDef>
+        <warmupTime>.9</warmupTime>
+        <range>45</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>30</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_762x39mmSoviet</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>TRUE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_HK416N_CRG</defName>
+    <label>HK416N</label>
+    <description>The HK416 is a tactical rifle/carbine designed Heckler and Koch. It is based on the AR-15 platform, with the notable inclusion of an HK-proprietary short-stroke gas piston system </description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_HK416N</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>39220</WorkToMake>
+	  <AimEfficiency>0.725</AimEfficiency>
+	  <ShotSpread>0.08</ShotSpread>
+	  <SwayFactor>1.35</SwayFactor>
+	  <Bulk>8.9</Bulk>
+	  <Mass>3.6</Mass>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>58</Steel>
+      <Component>5</Component>
+    </costList>
+    <verbs>
+     <li Class="Combat_Realism.VerbPropertiesCR">
+	    <recoilPattern>Regular</recoilPattern>
+	    <recoilAmount>0.79</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_556x45mmNATO_FMJ</projectileDef>
+        <warmupTime>1.1</warmupTime>
+        <range>60</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>30</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>TRUE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+  
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_HK417_CRG</defName>
+    <label>HK417 A2</label>
+    <description>The Heckler and Koch HK417 is a battle rifle designed and manufactured by Heckler and Koch in Germany. It is a gas-operated, selective fire rifle with a rotating bolt and is essentially an enlarged HK416 assault rifle. </description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_HK417</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>48753</WorkToMake>
+	  <AimEfficiency>1.10</AimEfficiency>
+	  <ShotSpread>0.07</ShotSpread>
+	  <SwayFactor>1.58</SwayFactor>
+	  <Bulk>10.42</Bulk>
+	  <Mass>5.2</Mass>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>68</Steel>
+      <Component>6</Component>
+    </costList>
+    <verbs>
+     <li Class="Combat_Realism.VerbPropertiesCR">
+	    <recoilPattern>Regular</recoilPattern>
+	    <recoilAmount>1.09</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x51mmNATO_FMJ</projectileDef>
+        <warmupTime>1.6</warmupTime>
+        <range>85</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>20</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+        <aimedBurstShotCount>2</aimedBurstShotCount>
+		<aiUseBurstMode>TRUE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+  
+  <!-- ============================================== -->
+  
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_TAR-21_CRG</defName>
+    <label>TAR-21</label>
+    <description>The TAR-21 is a bullpup assault rifle chambered for 5.56×45mm NATO ammunition.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_TAR-21</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>38170</WorkToMake>
+	  <AimEfficiency>0.575</AimEfficiency>
+	  <ShotSpread>0.07</ShotSpread>
+	  <SwayFactor>1.05</SwayFactor>
+	  <Bulk>7.2</Bulk>
+	  <Mass>3.27</Mass>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>51</Steel>
+      <Component>5</Component>
+    </costList>
+    <verbs>
+     <li Class="Combat_Realism.VerbPropertiesCR">
+	    <recoilPattern>Regular</recoilPattern>
+	    <recoilAmount>0.89</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_556x45mmNATO_FMJ</projectileDef>
+        <warmupTime>.8</warmupTime>
+        <range>60</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>30</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>TRUE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+  
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_F2000_CRG</defName>
+    <label>F2000</label>
+    <description>FN F2000 is a 5.56×45mm NATO bullpup assault rifle, designed by FN Herstal</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_F2000</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>38345</WorkToMake>
+	  <AimEfficiency>0.65</AimEfficiency>
+	  <ShotSpread>0.09</ShotSpread>
+	  <SwayFactor>1.05</SwayFactor>
+	  <Bulk>6.88</Bulk>
+	  <Mass>3.4</Mass>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>50</Steel>
+      <Component>5</Component>
+    </costList>
+    <verbs>
+     <li Class="Combat_Realism.VerbPropertiesCR">
+	    <recoilPattern>Regular</recoilPattern>
+	    <recoilAmount>0.85</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_556x45mmNATO_FMJ</projectileDef>
+        <warmupTime>1</warmupTime>
+        <range>55</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>30</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>TRUE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+  
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_Thompson_CRG</defName>
+    <label>Thompson SMG</label>
+    <description>The Thompson submachine gun is an American submachine gun, invented by John T. Thompson in 1918, It was favored by soldier, criminals, police and civilians alike.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_Thompson</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>25488</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.12</ShotSpread>
+	  <SwayFactor>1.41</SwayFactor>
+	  <Bulk>8.1</Bulk>
+	  <Mass>4.8</Mass>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>33</Steel>
+	  <WoodLog>9</WoodLog>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <recoilPattern>Regular</recoilPattern>
+		<recoilAmount>0.71</recoilAmount>
+		<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_45ACP_FMJ</projectileDef>
+       <warmupTime>.4</warmupTime>
+        <range>20</range>
+		<burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>ShotHeavySMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>30</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_45ACP</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+  
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_PPSh-41_CRG</defName>
+    <label>PPSh-41</label>
+    <description>The PPSh-41 is a submachine gun designed by Georgi Shpagin as a cheap and reliable gun. </description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_PPSh-41</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>26475</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.12</ShotSpread>
+	  <SwayFactor>1.41</SwayFactor>
+	  <Bulk>8.43</Bulk>
+	  <Mass>3.63</Mass>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>32</Steel>
+	  <WoodLog>6</WoodLog>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <recoilPattern>Regular</recoilPattern>
+		<recoilAmount>0.64</recoilAmount>
+		<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x25mmTokarev_FMJ</projectileDef>
+       <warmupTime>.4</warmupTime>
+        <range>20</range>
+		<burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotHeavySMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>71</magazineSize>
+		<reloadTicks>300</reloadTicks>
+		<ammoSet>AmmoSet_762x25mmTokarev</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+  
+    <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_Skorpion_CRG</defName>
+    <label>Škorpion vz.61</label>
+    <description>The Škorpion vz.61 is a Czechoslovak 7.65 mm machine pistol developed in 1959 by Miroslav Rybář</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_Skorpion</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>20190</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.17</ShotSpread>
+	  <SwayFactor>.52</SwayFactor>
+	  <Bulk>3.94</Bulk>
+	  <Mass>1.3</Mass>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>33</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <recoilPattern>Regular</recoilPattern>
+		<recoilAmount>.98</recoilAmount>
+		<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_32ACP_FMJ</projectileDef>
+       <warmupTime>.4</warmupTime>
+        <range>10</range>
+		<burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotHeavySMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>20</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_32ACP</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+  
+    <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_RPK_CRG</defName>
+    <label>RPK</label>
+    <description>The RPK is a 7.62×39mm light machine gun of Soviet design, developed by Mikhail Kalashnikov in the late 1950s, parallel with the AKM assault rifle.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_RPK</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>38928</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.05</ShotSpread>
+	  <SwayFactor>1.52</SwayFactor>
+	  <Bulk>10.4</Bulk>
+	  <Mass>4.8</Mass>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>50</Steel>
+	  <WoodLog>11</WoodLog>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+	<recoilPattern>Mounted</recoilPattern>
+	<recoilAmount>0.99</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x39mmSoviet_FMJ</projectileDef>
+        <warmupTime>1.4</warmupTime>
+        <range>100</range>
+        <burstShotCount>11</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>75</magazineSize>
+		<reloadTicks>300</reloadTicks>
+		<ammoSet>AmmoSet_762x39mmSoviet</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>FALSE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+  
+    <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_RPK-74M_CRG</defName>
+    <label>RPK-74M</label>
+    <description>The RPK-74M is an updated RPK-74 which was introduced in 1974 together with the AK-74 assault rifle and chambered for the new 5.45×39mm high-velocity cartridge. The RPK-74 derives from the AK-74 rifle</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_RPK-74M</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+	  <WorkToMake>35230</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.05</ShotSpread>
+	  <SwayFactor>1.55</SwayFactor>
+	  <Bulk>9.53</Bulk>
+	  <Mass>4.76</Mass>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>64</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+	<recoilPattern>Mounted</recoilPattern>
+	<recoilAmount>0.44</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_545x39mmSoviet_FMJ</projectileDef>
+        <warmupTime>1.4</warmupTime>
+        <range>100</range>
+        <burstShotCount>9</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>45</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_545x39mmSoviet</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>FALSE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+  
+    <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_Minimi_CRG</defName>
+    <label>Minimi</label>
+    <description>The Minimi is a 5.56mm light machine gun developed by Fabrique Nationale</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_FNMinimi</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+		<WorkToMake>38570</WorkToMake>
+		<AimEfficiency>0.50</AimEfficiency>
+		<ShotSpread>0.07</ShotSpread>
+		<SwayFactor>1.63</SwayFactor>
+		<Bulk>10.40</Bulk>
+		<Mass>6.85</Mass>
+		<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>74</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+     <li Class="Combat_Realism.VerbPropertiesCR">
+	    <recoilPattern>Mounted</recoilPattern>
+	    <recoilAmount>0.33</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_556x45mmNATO_FMJ</projectileDef>
+        <warmupTime>1.4</warmupTime>
+        <range>100</range>
+        <burstShotCount>12</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>200</magazineSize>
+		<reloadTicks>660</reloadTicks>
+		<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>FALSE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+  
+      <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_PKM_CRG</defName>
+    <label>Minimi</label>
+    <description>The PKM is a 7.62 mm general-purpose machine gun designed in the Soviet Union.  It was introduced in 1961 and then the improved PKM in 1969 to replace the SGM and RP-46 machine guns in Soviet service.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_PKM</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+		<WorkToMake>44698</WorkToMake>
+		<AimEfficiency>0.50</AimEfficiency>
+		<ShotSpread>0.05</ShotSpread>
+		<SwayFactor>1.94</SwayFactor>
+		<Bulk>11.92</Bulk>
+		<Mass>7.5</Mass>
+		<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>81</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+     <li Class="Combat_Realism.VerbPropertiesCR">
+	    <recoilPattern>Mounted</recoilPattern>
+	    <recoilAmount>0.82</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x54mmR_FMJ</projectileDef>
+        <warmupTime>1.4</warmupTime>
+        <range>100</range>
+        <burstShotCount>10</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+	<li Class="Combat_Realism.CompProperties_AmmoUser">
+		<magazineSize>100</magazineSize>
+		<reloadTicks>660</reloadTicks>
+		<ammoSet>AmmoSet_762x54mmR</ammoSet>
+	</li>
+	<li Class="Combat_Realism.CompProperties_FireModes">
+                <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>FALSE</aiUseAimMode>
+	</li>
+    </comps>
+  </ThingDef>
+  
+  <!-- ============================================== -->
+  
+<ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_RPG-7_CRG</defName>
+    <label>RPG-7</label>
+    <description>The RPG-7 is a portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher. </description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Gun_RPG-7</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>12875</WorkToMake>
+	  <AimEfficiency>0.725</AimEfficiency>
+	  <ShotSpread>0.2</ShotSpread>
+	  <SwayFactor>1.65</SwayFactor>
+	  <Bulk>9.50</Bulk>
+	  <Mass>7</Mass>
+      <RangedWeapon_Cooldown>1.93</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>65</Steel>
+	  <WoodLog>4</WoodLog>
+      <Component>2</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_RPG7Grenade_HEAT</projectileDef>
+        <warmupTime>1.9</warmupTime>
+        <range>25</range>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>1</magazineSize>
+		<reloadTicks>300</reloadTicks>
+		<ammoSet>AmmoSet_RPG7Grenade</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+  <!-- ============================================== -->
+  
+</ThingDefs>

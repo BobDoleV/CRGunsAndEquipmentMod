@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+  
+  <!-- ==================== .338 Lapua Magnum ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_338Lapua_FMJ</defName>
+    <label>make .338 Lapua Magnum (FMJ) cartridge x250</label>
+    <description>Craft 250 .338 Lapua Magnum (FMJ) cartridges.</description>
+    <jobString>Making .338 Lapua Magnum (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>9</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_338Lapua_FMJ>250</Ammo_338Lapua_FMJ>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_338Lapua_Sabot</defName>
+    <label>make .338 Lapua Magnum (Sabot) cartridge x250</label>
+    <description>Craft 250 .338 Lapua Magnum (Sabot) cartridges.</description>
+    <jobString>Making .338 Lapua Magnum (Sabot) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>7</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_338Lapua_Sabot>250</Ammo_338Lapua_Sabot>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_338Lapua_HP</defName>
+    <label>make .338 Lapua Magnum (HP) cartridge x250</label>
+    <description>Craft 250 .338 Lapua Magnum (HP) cartridges.</description>
+    <jobString>Making .338 Lapua Magnum (HP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>11</count>
+      </li>
+     </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_338Lapua_HP>250</Ammo_338Lapua_HP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_338Lapua_Incendiary</defName>
+    <label>make .338 Lapua Magnum (AP-I) cartridge x250</label>
+    <description>Craft 250 .338 Lapua Magnum (AP-I) cartridges.</description>
+    <jobString>Making .338 Lapua Magnum (AP-I) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Prometheum</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Prometheum</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_338Lapua_Incendiary>250</Ammo_338Lapua_Incendiary>
+    </products>
+  </RecipeDef>
+  
+ 
+
+</RecipeDefs>

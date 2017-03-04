@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <!-- ==================== Arrows ========================== -->
+
+  <ThingDef Class="Combat_Realism.AmmoDef" Name="AmmoArrowBase" ParentName="AmmoBase" Abstract="True">
+    <description>Simple arrow design with a cutting head attached to a wooden shaft.</description>
+    <statBases>
+	  <Mass>0.061</Mass>
+	  <Bulk>0.48</Bulk>
+    </statBases>
+    <thingCategories>
+      <li>AmmoArrows</li>
+    </thingCategories>
+    <stackLimit>200</stackLimit>
+  </ThingDef>
+
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="AmmoArrowBase">
+    <defName>Ammo_Arrow_Stone</defName>
+    <label>arrow (stone)</label>
+    <graphicData>
+      <texPath>Things/Ammo/Neolithic/Arrow/Stone</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.26</MarketValue>
+    </statBases>
+		<linkedProjectile>Projectile_Arrow_Stone</linkedProjectile>
+		<ammoClass>StoneArrow</ammoClass>
+  </ThingDef>
+
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="AmmoArrowBase">
+    <defName>Ammo_Arrow_Steel</defName>
+    <label>arrow (steel)</label>
+    <graphicData>
+      <texPath>Things/Ammo/Neolithic/Arrow/Steel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.34</MarketValue>
+    </statBases>
+		<linkedProjectile>Projectile_Arrow_Steel</linkedProjectile>
+		<ammoClass>SteelArrow</ammoClass>
+  </ThingDef>
+
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="AmmoArrowBase">
+    <defName>Ammo_Arrow_Plasteel</defName>
+    <label>arrow (plasteel)</label>
+    <graphicData>
+      <texPath>Things/Ammo/Neolithic/Arrow/Plasteel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>.82</MarketValue>
+    </statBases>
+		<linkedProjectile>Projectile_Arrow_Plasteel</linkedProjectile>
+		<ammoClass>PlasteelArrow</ammoClass>
+		<canBeSpawningInventory>false</canBeSpawningInventory>
+  </ThingDef>
+  
+  <!-- ==================== Great arrows ========================== -->
+
+  <ThingDef Class="Combat_Realism.AmmoDef" Name="AmmoGreatArrowBase" ParentName="AmmoBase" Abstract="True">
+    <description>Heavy arrow designed to be fired from an Atlatl.</description>
+    <statBases>
+	  <Mass>0.152</Mass>
+	  <Bulk>1.65</Bulk>
+    </statBases>
+    <thingCategories>
+      <li>AmmoGreatArrows</li>
+    </thingCategories>
+    <stackLimit>75</stackLimit>
+  </ThingDef>
+
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="AmmoGreatArrowBase">
+    <defName>Ammo_GreatArrow_Stone</defName>
+    <label>great arrow</label>
+    <graphicData>
+      <texPath>Things/Ammo/Neolithic/SpearArrow/Stone</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.51</MarketValue>
+    </statBases>
+	<linkedProjectile>Projectile_GreatArrow_Stone</linkedProjectile>
+	<ammoClass>StoneArrow</ammoClass>
+  </ThingDef>
+
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="AmmoGreatArrowBase">
+    <defName>Ammo_GreatArrow_Steel</defName>
+    <label>great arrow (steel)</label>
+    <graphicData>
+      <texPath>Things/Ammo/Neolithic/SpearArrow/Steel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.59</MarketValue>
+    </statBases>
+		<linkedProjectile>Projectile_GreatArrow_Steel</linkedProjectile>
+		<ammoClass>SteelArrow</ammoClass>
+  </ThingDef>
+
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="AmmoGreatArrowBase">
+    <defName>Ammo_GreatArrow_Plasteel</defName>
+    <label>great arrow (plasteel)</label>
+    <graphicData>
+      <texPath>Things/Ammo/Neolithic/SpearArrow/Plasteel</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.07</MarketValue>
+    </statBases>
+		<linkedProjectile>Projectile_GreatArrow_Plasteel</linkedProjectile>
+		<ammoClass>PlasteelArrow</ammoClass>
+		<canBeSpawningInventory>false</canBeSpawningInventory>
+  </ThingDef>
+
+</Defs>

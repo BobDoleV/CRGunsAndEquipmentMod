@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <!-- ==================== .50 BMG ========================== -->
+
+  <ThingDef Class="Combat_Realism.AmmoDef" Name="Ammo50BMGBase" ParentName="SmallAmmoBase" Abstract="True">
+    <description>Large caliber bullet used by many heavy machine guns and anti-materiel rifles.</description>
+    <statBases>
+	  <Mass>0.118</Mass>
+	  <Bulk>0.16</Bulk>
+    </statBases>
+		<tradeTags>
+			<li>CR_AutoEnableTrade</li>
+			<li>CR_AutoEnableCrafting</li>
+		</tradeTags>
+    <thingCategories>
+      <li>Ammo50BMG</li>
+    </thingCategories>
+    <stackLimit>250</stackLimit>
+  </ThingDef>
+
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="Ammo50BMGBase">
+    <defName>Ammo_50BMG_FMJ</defName>
+    <label>.50 BMG cartridge (FMJ)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.49</MarketValue>
+    </statBases>
+	<linkedProjectile>Bullet_50BMG_FMJ</linkedProjectile>
+	<ammoClass>FullMetalJacket</ammoClass>
+  </ThingDef>
+
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="Ammo50BMGBase">
+    <defName>Ammo_50BMG_AP</defName>
+    <label>.50 BMG cartridge (Sabot)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/Sabot</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.52</MarketValue>
+    </statBases>
+	<linkedProjectile>Bullet_50BMG_Sabot</linkedProjectile>
+	<ammoClass>Sabot</ammoClass>
+  </ThingDef>
+
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="Ammo50BMGBase">
+    <defName>Ammo_50BMG_HE</defName>
+    <label>.50 BMG cartridge (HE)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.62</MarketValue>
+    </statBases>
+	<linkedProjectile>Bullet_50BMG_HE</linkedProjectile>
+	<ammoClass>ExplosiveAP</ammoClass>
+  </ThingDef>
+
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="Ammo50BMGBase">
+    <defName>Ammo_50BMG_Incendiary</defName>
+    <label>.50 BMG cartridge (AP-I)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.57</MarketValue>
+    </statBases>
+	<linkedProjectile>Bullet_50BMG_Incendiary</linkedProjectile>
+	<ammoClass>IncendiaryAP</ammoClass>
+  </ThingDef>
+  
+  <!-- ==================== 14.5x114mm ========================== -->
+
+  <ThingDef Class="Combat_Realism.AmmoDef" Name="Ammo145x114mmBase" ParentName="SmallAmmoBase" Abstract="True">
+    <description>Old-school anti-tank cartridge originally designed for AT rifles, it is also used by a number of heavy machine guns.</description>
+    <statBases>
+	  <Mass>0.189</Mass>
+	  <Bulk>0.24</Bulk>
+    </statBases>
+	<tradeTags>
+	  <li>CR_AutoEnableTrade</li>
+	  <li>CR_AutoEnableCrafting</li>
+	</tradeTags>
+    <thingCategories>
+      <li>Ammo145x114mm</li>
+    </thingCategories>
+    <stackLimit>250</stackLimit>
+  </ThingDef>
+
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="Ammo145x114mmBase">
+    <defName>Ammo_145x114mm_FMJ</defName>
+    <label>14.5x114mm cartridge (FMJ)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.62</MarketValue>
+    </statBases>
+	<linkedProjectile>Bullet_145x114mm_FMJ</linkedProjectile>
+	<ammoClass>FullMetalJacket</ammoClass>
+  </ThingDef>
+
+    <ThingDef Class="Combat_Realism.AmmoDef" ParentName="Ammo145x114mmBase">
+    <defName>Ammo_145x114mm_Sabot</defName>
+    <label>14.5x114mm cartridge (Sabot)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/Sabot</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.66</MarketValue>
+    </statBases>
+	<linkedProjectile>Bullet_145x114mm_Sabot</linkedProjectile>
+	<ammoClass>Sabot</ammoClass>
+  </ThingDef>
+  
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="Ammo145x114mmBase">
+    <defName>Ammo_145x114mm_HE</defName>
+    <label>14.5x114mm cartridge (HE)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>.86</MarketValue>
+    </statBases>
+	<linkedProjectile>Bullet_145x114mm_HE</linkedProjectile>
+	<ammoClass>ExplosiveAP</ammoClass>
+  </ThingDef>
+
+  <ThingDef Class="Combat_Realism.AmmoDef" ParentName="Ammo145x114mmBase">
+    <defName>Ammo_145x114mm_Incendiary</defName>
+    <label>14.5x114mm cartridge (AP-I)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>.77</MarketValue>
+    </statBases>
+	<linkedProjectile>Bullet_145x114mm_Incendiary</linkedProjectile>
+	<ammoClass>IncendiaryAP</ammoClass>
+  </ThingDef>
+
+</Defs>

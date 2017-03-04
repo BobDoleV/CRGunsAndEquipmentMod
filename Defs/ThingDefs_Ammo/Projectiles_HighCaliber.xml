@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+
+
+
+	<!-- ================== .50 BMG ================== -->
+
+	<ThingDef Name="Base50BMGBullet" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<speed>185</speed>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base50BMGBullet">
+		<defName>Bullet_50BMG_FMJ</defName>
+		<label>.50 BMG bullet (FMJ)</label>
+		<projectile>
+			<damageAmountBase>37</damageAmountBase>
+			<armorPenetration>0.783</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base50BMGBullet">
+		<defName>Bullet_50BMG_Sabot</defName>
+		<label>.50 BMG bullet (Sabot)</label>
+		<projectile>
+			<damageAmountBase>19</damageAmountBase>
+			<armorPenetration>1.13</armorPenetration>
+			<speed>241</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base50BMGBullet">
+		<defName>Bullet_50BMG_HE</defName>
+		<label>.50 BMG bullet (HE)</label>
+		<projectile>
+			<damageAmountBase>33</damageAmountBase>
+			<armorPenetration>0.705</armorPenetration>
+			<secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>19</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base50BMGBullet">
+		<defName>Bullet_50BMG_Incendiary</defName>
+		<label>.50 BMG bullet (AP-I)</label>
+		<projectile>
+			<damageAmountBase>31</damageAmountBase>
+			<armorPenetration>.971</armorPenetration>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>5</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+
+	<!-- ================== 14.5x114mm ================== -->
+
+	<ThingDef Name="Base145x114mmBullet" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<speed>200</speed>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base145x114mmBullet">
+		<defName>Bullet_145x114mm_FMJ</defName>
+		<label>14.5x114mm bullet (FMJ)</label>
+		<projectile>
+			<damageAmountBase>43</damageAmountBase>
+			<armorPenetration>.8</armorPenetration>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="Base145x114mmBullet">
+		<defName>Bullet_145x114mm_Sabot</defName>
+		<label>14.5x114mm bullet (Sabot)</label>
+		<projectile>
+			<damageAmountBase>22</damageAmountBase>
+			<armorPenetration>1.15</armorPenetration>
+			<speed>260</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base145x114mmBullet">
+		<defName>Bullet_145x114mm_HE</defName>
+		<label>14.5x114mm bullet (HE)</label>
+		<projectile>
+			<damageAmountBase>39</damageAmountBase>
+			<armorPenetration>.8</armorPenetration>
+			<secondaryDamage>
+				<li>
+					<def>Bomb_Secondary</def>
+					<amount>22</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base145x114mmBullet">
+		<defName>Bullet_145x114mm_Incendiary</defName>
+		<label>14.5x114mm bullet (AP-I)</label>
+		<projectile>
+			<damageAmountBase>37</damageAmountBase>
+			<armorPenetration>.992</armorPenetration>
+			<secondaryDamage>
+				<li>
+					<def>Flame_Secondary</def>
+					<amount>6</amount>
+				</li>
+			</secondaryDamage>
+		</projectile>
+	</ThingDef>
+
+
+</ThingDefs>

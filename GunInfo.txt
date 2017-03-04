@@ -1,0 +1,235 @@
+=Guns===================================================
+*Bulk = weapons length in mm/100
+If weapon has folding stock use ((Stock extended-Stock Folded)/2)+Stock Folded
+Round to (.00)
+
+*Mass = weight in Kg/10
+Round to (.00)
+
+*SwayFactor
+Use (((Length(mm)/100)+Mass)/10 for standard three point contact weapons
+Use (((Length(mm)/100)+Mass)/10)+1  Non three point contact(ie:handgun) and odd or very special weapons(ie: stand alone grenade launcher)
+(Note: always use Stock extended length) 
+If it the weapon a Bipod subtract .10, and if it has a Scope Add (Scope magnification/100)(ie:x8 scope would add .08) with a max of .12
+For Turrets use ((Length(mm)/100)+Mass)/27
+For Special weapons like the Flak Gun use (Length(m)+Barrel Mass)/370
+Round to (.00)
+
+*Range = Effective range in (meters/10)+ 5
+(Note: shotguns have a range of 15, grenade launchers use area range)
+Max Range for weapons with only iron sighs is 120
+
+*ShotSpread = Barrel length in mm (Notes: Use SG numbers for shotguns and, use LV numbers for low-velocity rounds(sub 150 m/s) ie. 40x46mmGrenade, 30x64mmFuel)
+.01 = 790+
+.02 = 730-789
+.03 = 670-729
+.04 = 615-669	sniper def
+.05 = 560-614	m24 lee-en
+.06 = 510-559
+.07 = 460-509
+.08 = 415-459	rifl and LMG def m16
+.09 = 370-414
+.10 = 330-369
+.11 = 290-329/SG 702
+.12 = 255-289/SG 609-701	SMG def
+.13 = 220-254/SG 516-608
+.14 = 190-219/SG 433-515
+.15 = 155-189/SG 350-432/ 430+
+.16 = 130-154/SG 277-349/LV 365-429 pist def
+.17 = 105-129/SG 204-276/LV 308-364
+.18 = 85-104/SG 141-203/LV 259-307
+.19 = 65-84/SG 78-140/LV 218-258	
+.20 = 0-64/SG 0-77/LV 0-217/Missiles/RPGS/non barrelled weapons use
+
+*AimEfficiency
+3 Point Contact	    Non 3 Point Contact(ie:handgun)
+50    = iron sight  =	35
+57.5  = Reflex      =	42.5
+For weapons with scope use the following formulas
+3 Point Contact Use	(scope magnification(7.5))+50
+Non 3 Point Contact Use	(scope magnification(7.5))+35
+Round to the tenth (.0)
+
+*warmupTime = time it takes to aim
+Long Range(>30)		Short Range(<30)
+1.1  =	iron sight  =	.6
+1    =	Reflex      =	.5
+For weapons with scope use the following formulas
+Long Range(>30)		((scope magnification(.1))+1
+Short Range(<30)	(scope magnification(.1))+.5
+Missiles/RPGS/non barrelled use Long Range+.8
+Special weapon like the Flak cannon use Long range+3
+Round to the tenth (.0)
+
+*RangedWeapon_Cooldown = Time it takes to rechamber a round and recover from firing.
+Base Value = (((Bullet Mass in kg)(Muzzle velocity))/Gun Mass)/100 Note: only take the number to 
+Bolt Action   = +1.15	
+Pump Action   = +.95	
+Lever Action  = +.75	
+Semi-Auto     = +.35	
+Double Action = +.35	
+Single Action = +.85	
+full-auto     = +1.99 (Note: For machine guns)
+handstop      = -.01
+forward grip  = -.01
+angled grip   = -.01
+Special:Missiles/RPGS/non barrelled = 1.5
+Special like Flak Cannon = 2.5
+Round to (.00)
+
+*recoilPattern = Mounted if weapon has bipod Regular otherwise
+
+*recoilAmount = (((Bullet Mass in kg)(Muzzle velocity))/Gun Mass)/1.25 EX:M16 ((.004*948)/3.26)/1.25=.93  If the weapon has a handstop/forward grip/angled grip/bipod -.10 to the final number. add +.10 to final number if the weapon does not have three point contact(ie:A buttshock).
+-.15 if on tripod(ie:turret)
+Round to (.00)
+
+*ticksBetweenBurstShots = Rate of Fire 3600/whole number
+
+*reloadTicks
+Magazine = 230
+StripperClip = 255
+Handload = 60 per bullet/shell
+Revolver Speedloader = 265
+Large caliber Magazine(=>12mm) = 285
+Drum Magazine/topfeed = 300
+Belt fed = 660
+Minigun style = 700
+Single Shot = 150
+Flak Cannon style = 750
+Missiles/RPGS = 300
+
+*costList round all to whole numbers
+ -Steel ((bulk+mass)3.4)+15
+	((bulk+mass).9)+15 Spacer
+ -Wood If the weapon has wood, subtract 1.5 wood value from steel (round to whole number ie: 19.5=20)
+   buttstock .1
+   handgaurd .05
+   grip .01 per grip
+   center .04 (a gun like the PPSh-41 would use this)
+   body .20 (guns like the lee enfield)Note: dont add any other wood with this
+ -Components minimum of 1 1250 value 21
+   semi-auto/double action +1	
+   fullauto +3
+   Reflex/x2-4 Scope +1
+   x5-8 Scope +2
+   x9-12 Scope +3
+   AdvancedGun +4
+Round to whole number (0)
+
+*WorkToMake
+   (Steel)125
+   (Wood)87.5
+   (Component)1750
+   bolt/pump/lever 500
+   double action 750
+   semi-auto 1250
+   fullauto 4500
+   ScopeX*300
+   AdvancedGun 5000
+   CR_Sidearm -1250
+   If the gun is of bullpup design add 425
+   Also add work based off the bullet used with the weapon, use the formula below
+   damage(armorpenx10) 
+   ___________________x2750=Work
+   (damage/1.5)+1.5
+Round to whole numbers (0)
+
++Bullets+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*Damage
+Round damage to whole number(ei: 6.4 would be 6)
+((Jouls/100)BulletDiameter)100.7
+__________________________ = Damage (FMJ)
+
+(((Joules-200)/150).5)+3.9
+
+Ex. .303 3,127J 7.92mm
+    ((3127/100)7.92)	   247.7 
+________________________ = _____ = 18.1 = 18 Damage
+(((3127-200)/150).5)+3.9   13.7 
+
+AP=FMJx.75	
+HP=FMJx1.25
+HE=FMJx.90+FMJx.5
+AP-I=FMJx.85+FMJx.14 Note: The .14 is Flame_Secondary damage
+SABOT=FMJx.5
+
+*Speed
+(meters per second).2
+SABOT=x1.3
+
+*armorPenetration
+Round pen to the 1000th(ei: .16294 would be .163)
+
+     joules/100
+______________________/10 = FMJ pen
+(((joules-200)/413).5)+1.5
+
+Ex. .303 3,127J
+     3127/100		     31.27
+______________________/10 = ______/10 = 6.20/10 = .62
+(((3127-200/413).5)+1.5	     5.04
+
+
+AP=FMJx1.24
+HP=FMJx.74
+HE=FMJx.9
+AP=I=FMJx1.24
+SABOT=FMJx1.44
+
+*bulk ((overall length)(base diameter))/17500 round to .00
+
+*stack size 
+bulk 0-.06 = 500
+bulk .07+  = 250
+
+*resource cost amount
+steel = (bulk+mass)145
+AP/HP +2 Steel
+Sabot=Steelx.83 and Uranium = steelx.1
+AP-I=Steelx.9 and Prometheum = steelx.22
+HE=Steel.80 and FSX = steel.22
+bean=steelx.75 and cloth = steelx.37
+emp=steelx.75 and Component = steelx.25
+Note:This number are for a stack size of 500 if you change the stack size divide the final value by the difference from 500
+
+*MarketValue					   #
+(resourcevalue/(Number of Bullets/resource amount))+((Damage(Penetration))/100)+(10/Number of Bullets)
+Ex. .303 (2/(500/11))+((18(.62))/100)+10/500)=(2/(45.46))+(.11)+(.02)=.04+.11+.02=.17
+Note if the bullet uses more than one resource do the first part(everything before the #) of the formula for each.
+
+
+
+=Charge Weapons and Ammo(work in progress)===========================================================
+Important abbreviations
+CL=Case length
+PCS=Projectile Cross Section
+Thoughts on charge weapon(Tokamak weapons): They are basically weapons that shoot plasma contained in  a magnetic field the shape of a doughnut. :P aka you are shooting super charged doughnut at things =D So because they are shooting plasma and not a conventional projectile we have some choices on how it can effect something, for one we can think of it as shooting super heated doughnuts of death that burn holes through things(doughnut shaped ones!) or as little doughnut shaped lighting bolts that send massive amounts volts and amperes into there target or some combo of the two.  My take on them is more to the lighting side because hey lighting is cool. :P So to me they should deal electrical based damage causing thermal burns and/or muscle, nerve, and tissue destruction as the charge passes through something living.
+
+LIGHTING DOUGHNUT! pewpewpew
+
++Weapons+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+*bulk 
+CL<41 SquarRoot(((CL/PCS)-2.8)16.5)+1 if has butt stock add 2.5 10
+CL>41 SquarRoot(((CL/PCS)-2.8)16.5)+1.05+(CL/100) if has butt stock add 2.5 12.64
+
+*Range 12((2((CL/PCS)-2)-1) round to whole number
+
+
++Ammo++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+*Damage 
+   
+  (PCS^2)
+__________
+SquarRoot(PCS*1.15)
+
+*Case length minimun of 3(PCS)
+
+*bulk ((PCS*1.5)*(CL+PCS))/17500
+
+*Mass (PCS*1.5)*(CL)/21500
+
+=Explosives(work in progress)=======================================================================
+
+=Tribal Weapons(work in progress)==================================================================

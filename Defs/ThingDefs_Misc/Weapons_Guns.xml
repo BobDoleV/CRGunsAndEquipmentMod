@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+
+  <ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <selectable>True</selectable>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Industrial</techLevel>
+    <smeltable>true</smeltable>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="BaseMakeableGun" ParentName="BaseGun" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+
+  <ThingDef Name="BaseHumanMakeableGun" ParentName="BaseMakeableGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  
+
+  <!-- ============================================================== -->
+
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Pistol</defName>
+    <label>M1911</label>
+    <description>Ancient pattern automatic pistol. Weak and short range, but quick.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Pistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>15450</WorkToMake>
+	  <AimEfficiency>0.35</AimEfficiency>
+	  <ShotSpread>0.17</ShotSpread>
+	  <SwayFactor>1.32</SwayFactor>
+      <RangedWeapon_Cooldown>0.38</RangedWeapon_Cooldown>
+	  <Bulk>2.10</Bulk>
+	  <Mass>1.11</Mass>
+    </statBases>
+    <costList>
+      <Steel>26</Steel>
+      <Component>2</Component>
+    </costList>
+    <weaponTags>
+      <li>CR_Sidearm</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_45ACP_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>10</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>7</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_45ACP</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_PumpShotgun</defName>
+    <label>Remington 870</label>
+    <description>Ancient design. Deadly, but short range.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractShotgun</soundInteract>
+    <statBases>
+      <WorkToMake>31151</WorkToMake>
+	  <AimEfficiency>0.50</AimEfficiency>
+	  <ShotSpread>0.5</ShotSpread>
+	  <SwayFactor>1.31</SwayFactor>
+	  <Bulk>10.29</Bulk>
+	  <Mass>3.29</Mass>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>46</Steel>
+	  <WoodLog>10</WoodLog>
+      <Component>1</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_12Gauge_Buck</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>15</range>
+        <soundCast>ShotShotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>5</magazineSize>
+		<reloadTicks>300</reloadTicks>
+		<ammoSet>AmmoSet_12Gauge</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_SurvivalRifle</defName>
+    <label>Lee-Enfield</label>
+    <description>Ancient bolt-action rifle. Good range, Good power, low rate of fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/SurvivalRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>31731</WorkToMake>
+      <AimEfficiency>0.50</AimEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>1.53</SwayFactor>
+      <Bulk>11.32</Bulk>
+      <Mass>3.96</Mass>
+      <RangedWeapon_Cooldown>1.17</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>47</Steel>
+	  <WoodLog>13</WoodLog>
+      <Component>1</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_303British_FMJ</projectileDef>
+        <warmupTime>.9</warmupTime>
+        <range>55</range>
+        <soundCast>ShotSurvivalRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>10</magazineSize>
+		<reloadTicks>255</reloadTicks>
+		<ammoSet>AmmoSet_303British</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_AssaultRifle</defName>
+    <label>M16</label>
+    <description>A general-purpose military weapon for field or urban combat. It fires a three-round burst. Good range, low power, high rate of fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>36820</WorkToMake>
+      <AimEfficiency>0.50</AimEfficiency>
+      <ShotSpread>0.07</ShotSpread>
+      <SwayFactor>1.33</SwayFactor>
+      <Bulk>10.00</Bulk>
+      <Mass>3.26</Mass>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>90</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+	    <recoilPattern>Regular</recoilPattern>
+	    <recoilAmount>0.93</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_556x45mmNATO_FMJ</projectileDef>
+        <warmupTime>.9</warmupTime>
+        <range>60</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>30</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+	    <aimedBurstShotCount>3</aimedBurstShotCount>
+		<aiUseBurstMode>TRUE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_SniperRifle</defName>
+    <label>M24</label>
+    <description>Ancient pattern military sniper rifle. Bolt action. Long range, great accuracy and power.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/SniperRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>42478</WorkToMake>
+      <AimEfficiency>1.25</AimEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>1.62</SwayFactor>
+      <Bulk>10.92</Bulk>
+      <Mass>6</Mass>
+      <RangedWeapon_Cooldown>1.16</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>73</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x51mmNATO_FMJ</projectileDef>
+        <warmupTime>1.8</warmupTime>
+        <range>85</range>
+        <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>5</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_MachinePistol</defName>
+    <label>UZI</label>
+    <description>A personal defense weapon is a micro-submachine gun. Short range, low power, high rate of fire. Very quick to aim and fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/MachinePistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractSMG</soundInteract>
+    <statBases>
+      <WorkToMake>27041</WorkToMake>
+      <MarketValue>550</MarketValue>
+      <AimEfficiency>0.50</AimEfficiency>
+      <ShotSpread>0.12</ShotSpread>
+      <SwayFactor>0.99</SwayFactor>
+      <Bulk>5.55</Bulk>
+      <Mass>3.50</Mass>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>46</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+				<recoilPattern>Regular</recoilPattern>
+				<recoilAmount>0.68</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_9x19mmPara_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>25</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>ShotMachinePistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>32</magazineSize>
+				<reloadTicks>230</reloadTicks>
+				<ammoSet>AmmoSet_9x19mmPara</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aimedBurstShotCount>3</aimedBurstShotCount>
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiUseAimMode>TRUE</aiUseAimMode>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>CR_SMG</li>
+		</weaponTags>
+  </ThingDef>
+
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_HeavySMG</defName>
+    <label>KG-9</label>
+    <description>A compact, wide-caliber slug-thrower. Very short range, but it packs a punch and handles quite well.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/HeavySMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractSMG</soundInteract>
+    <statBases>
+      <WorkToMake>25290</WorkToMake>
+      <AimEfficiency>0.35</AimEfficiency>
+      <ShotSpread>0.17</ShotSpread>
+      <SwayFactor>1.49</SwayFactor>
+      <Bulk>3.17</Bulk>
+      <Mass>1.7</Mass>
+      <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>32</Steel>
+      <Component>4</Component>
+    </costList>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+				<recoilPattern>Regular</recoilPattern>
+				<recoilAmount>1.36</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_9x19mmPara_FMJ</projectileDef>
+        <warmupTime>.4</warmupTime>
+        <range>10</range>
+        <burstShotCount>6</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotHeavySMG</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>32</magazineSize>
+				<reloadTicks>230</reloadTicks>
+				<ammoSet>AmmoSet_9x19mmPara</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aimedBurstShotCount>3</aimedBurstShotCount>
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiUseAimMode>TRUE</aiUseAimMode>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>CR_SMG</li>
+		</weaponTags>
+  </ThingDef>
+
+  <!-- ==================== T-9 incendiary launcher ========================== -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_IncendiaryLauncher</defName>
+    <label>T-9</label>
+    <description>Incendiary bolt launcher. Starts fires.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/IncendiaryLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>13000</WorkToMake>
+      <MarketValue>630</MarketValue>
+      <AimEfficiency>0.50</AimEfficiency>
+      <ShotSpread>0.17</ShotSpread>
+      <SwayFactor>1.54</SwayFactor>
+      <Bulk>11.25</Bulk>
+      <Mass>4.20</Mass>
+      <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>68</Steel>
+      <Component>4</Component>
+    </costList>
+	<weaponTags>
+      <li>AdvancedGun</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_30x64mmFuel_Incendiary</projectileDef>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <warmupTime>.9</warmupTime>
+        <range>53</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>ShotIncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>5</magazineSize>
+		<reloadTicks>285</reloadTicks>
+		<ammoSet>AmmoSet_30x64mmFuel</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+
+  <!-- ===================== L-15 LMG ========================= -->
+
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_LMG</defName>
+    <label>Bren Gun</label>
+    <description>A light machine gun.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/LMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>44468</WorkToMake>
+      <AimEfficiency>0.50</AimEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>2.08</SwayFactor>
+      <Bulk>11.56</Bulk>
+      <Mass>8.68</Mass>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>84</Steel>
+      <Component>4</Component>
+    </costList>
+    <weaponTags>
+      <li>CR_MachineGun</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+		<recoilPattern>Mounted</recoilPattern>
+		<recoilAmount>0.77</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_303British_FMJ</projectileDef>
+        <warmupTime>1.4</warmupTime>
+        <range>85</range>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>ShotMinigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+		<targetParams>
+			<canTargetLocations>true</canTargetLocations>
+		</targetParams>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>100</magazineSize>
+		<reloadTicks>300</reloadTicks>
+		<ammoSet>AmmoSet_303British</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+	    <aimedBurstShotCount>5</aimedBurstShotCount>
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>FALSE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+
+  <!-- ===================== Charge rifle ========================= -->
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_ChargeRifle</defName>
+    <label>R4</label>
+    <description>Charged-shot energy/projectile rifle.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractChargeRifle</soundInteract>
+    <statBases>
+      <WorkToMake>24000</WorkToMake>
+      <MarketValue>1600</MarketValue>
+      <AimEfficiency>0.575</AimEfficiency>
+      <ShotSpread>0.05</ShotSpread>
+      <SwayFactor>1.46</SwayFactor>
+      <Bulk>10.00</Bulk>
+      <Mass>4.60</Mass>
+      <RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>23</Steel>
+      <Plasteel>65</Plasteel>
+      <Component>7</Component>
+    </costList>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>AdvancedGun</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+				<recoilPattern>Regular</recoilPattern>
+				<recoilAmount>0.30</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_6x24mmCharged</projectileDef>
+        <warmupTime>1.1</warmupTime>
+        <range>55</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>6</burstShotCount>
+        <soundCast>ShotChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>60</magazineSize>
+		<reloadTicks>230</reloadTicks>
+		<ammoSet>AmmoSet_6x24mmCharged</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+	    <aimedBurstShotCount>3</aimedBurstShotCount>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+			<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+
+
+
+
+
+  <!-- ================ Improvised turret gun ============== -->
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_TurretImprovised</defName>
+    <label>improvised turret gun</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <menuHidden>true</menuHidden>
+    <description>Jury-rigged gun attached to a turret.</description>
+    <soundInteract>InteractRifle</soundInteract>
+    <canBeSpawningInventory>false</canBeSpawningInventory>
+    <tradeability>Never</tradeability>
+    <statBases>
+      <AimEfficiency>0.35</AimEfficiency>
+      <ShotSpread>0.08</ShotSpread>
+      <SwayFactor>1.20</SwayFactor>
+      <Bulk>7.00</Bulk>
+      <Mass>3.00</Mass>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+				<recoilPattern>Mounted</recoilPattern>
+				<recoilAmount>0.72</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_556x45mmNATO_FMJ</projectileDef>
+        <warmupTime>90</warmupTime>
+        <range>27</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>GunShotA</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>300</magazineSize>
+				<reloadTicks>300</reloadTicks>
+				<spawnUnloaded>true</spawnUnloaded>
+				<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aiUseBurstMode>TRUE</aiUseBurstMode>
+				<aiUseAimMode>TRUE</aiUseAimMode>
+				<noSnapshot>true</noSnapshot>
+				<noSingleShot>true</noSingleShot>
+			</li>
+		</comps>
+  </ThingDef>
+
+
+  <!-- ======================= Heavy weapons ======================= -->
+
+
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_Minigun</defName>
+    <label>minigun</label>
+    <description>A multi-barrel machine gun with an extremely high rate of fire. Mechanoid-built.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Minigun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <MarketValue>2200</MarketValue>
+      <AimEfficiency>.35</AimEfficiency>
+      <ShotSpread>0.06</ShotSpread>
+      <SwayFactor>2.7</SwayFactor>
+      <Bulk>8.02</Bulk>
+      <Mass>19.00</Mass>
+      <RangedWeapon_Cooldown>2.01</RangedWeapon_Cooldown>
+    </statBases>
+    <tradeability>Never</tradeability>
+    <destroyOnDrop>True</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>MechanoidGunHeavy</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+				<recoilPattern>Mounted</recoilPattern>
+				<recoilAmount>0.36</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x51mmNATO_FMJ</projectileDef>
+        <forcedMissRadius>2.4</forcedMissRadius>
+        <warmupTime>240</warmupTime>
+        <range>105</range>
+        <burstShotCount>100</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>ShotMinigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>600</magazineSize>
+				<reloadTicks>700</reloadTicks>
+				<ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiUseAimMode>FALSE</aiUseAimMode>
+			</li>
+		</comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_DoomsdayRocket</defName>
+    <label>doomsday rocket</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Combat_Realism.ProjectileCR_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>250</damageAmountBase>
+      <explosionRadius>5.5</explosionRadius>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_DoomsdayRocket</defName>
+    <label>doomsday rocket launcher</label>
+    <description>A single-use rocket launcher for quick retribution.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/DoomsdayLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>18000</WorkToMake>
+      <MarketValue>2000</MarketValue>
+      <AimEfficiency>.725</AimEfficiency>
+      <ShotSpread>0.2</ShotSpread>
+      <SwayFactor>2.85</SwayFactor>
+      <Bulk>17.50</Bulk>
+      <Mass>11.00</Mass>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>LargeRockets</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>170</Steel>
+      <Component>15</Component>
+      <FSX>5</FSX>
+    </costList>
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>false</destroyOnDrop>
+    <weaponTags>
+      <li>Gun</li>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCROneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_DoomsdayRocket</projectileDef>
+        <forcedMissRadius>0.0</forcedMissRadius>
+        <warmupTime>94</warmupTime>
+        <range>50</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Rocket</defName>
+    <label>rocket</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Combat_Realism.ProjectileCR_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>180</damageAmountBase>
+      <explosionRadius>3.5</explosionRadius>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_TripleRocket</defName>
+    <label>triple rocket launcher</label>
+    <description>A single-use rocket launcher that fires 3 projectiles in quick succession.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/RocketLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <MarketValue>1000</MarketValue>
+      <AimEfficiency>.725</AimEfficiency>
+      <ShotSpread>0.2</ShotSpread>
+      <SwayFactor>2.65</SwayFactor>
+      <Bulk>17.50</Bulk>
+      <Mass>9.00</Mass>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>LargeRockets</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>120</Steel>
+      <Component>8</Component>
+	  <FSX>3</FSX>
+    </costList>
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>false</destroyOnDrop>
+    <weaponTags>
+      <li>Gun</li>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCROneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Rocket</projectileDef>
+        <forcedMissRadius>2.0</forcedMissRadius>
+        <warmupTime>94</warmupTime>
+        <range>25</range>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <stopBurstWithoutLos>false</stopBurstWithoutLos>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+	    <aimedBurstShotCount>1</aimedBurstShotCount>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiUseAimMode>TRUE</aiUseAimMode>
+			<noSingleShot>true</noSingleShot>
+	  </li>
+	</comps>
+  </ThingDef>
+
+
+
+  <!-- ================= Mechanoid weapons ================= -->
+  
+  
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_ChargeBlasterHeavy</defName>
+    <label>heavy charge blaster</label>
+    <description>Charged-shot blaster for area suppressive fire. Mechanoid-built.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeBlasterHeavy</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2400</MarketValue>
+      <AimEfficiency>1.25</AimEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>4.50</SwayFactor>
+      <Bulk>24.00</Bulk>
+      <Mass>25.00</Mass>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <tradeability>Never</tradeability>
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>True</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <weaponTags>
+      <li>MechanoidGunHeavy</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+				<recoilPattern>Mounted</recoilPattern>
+				<recoilAmount>0.54</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_12x64mmCharged</projectileDef>
+        <forcedMissRadius>2.9</forcedMissRadius>
+        <warmupTime>180</warmupTime>
+        <range>93</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>20</burstShotCount>
+        <soundCast>ShotChargeBlaster</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>100</magazineSize>
+		<reloadTicks>300</reloadTicks>
+		<ammoSet>AmmoSet_12x64mmCharged</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+	    <aimedBurstShotCount>10</aimedBurstShotCount>
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_InfernoCannon</defName>
+    <label>inferno cannon</label>
+    <description>Incendiary-shot mini-artillery device. Mechanoid-built.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/InfernoCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2400</MarketValue>
+      <AimEfficiency>1.25</AimEfficiency>
+      <ShotSpread>0.1</ShotSpread>
+      <SwayFactor>3.50</SwayFactor>
+      <Bulk>37.50</Bulk>
+      <Mass>10.00</Mass>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <tradeability>Never</tradeability>
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>True</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <weaponTags>
+      <li>MechanoidGunHeavy</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_80x256mmFuel_Thermobaric</projectileDef>
+        <forcedMissRadius>3.5</forcedMissRadius>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <warmupTime>240</warmupTime>
+        <range>80</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>1</magazineSize>
+			<reloadTicks>270</reloadTicks>
+			<ammoSet>AmmoSet_80x256mmFuel</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_ChargeLance</defName>
+    <label>charge lance</label>
+    <description>Charged-shot rail-assisted lance weapon. Fires a single charged shot at high velocity.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeLance</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <AimEfficiency>1.25</AimEfficiency>
+      <ShotSpread>0.017</ShotSpread>
+      <SwayFactor>4.10</SwayFactor>
+      <Bulk>18.00</Bulk>
+      <Mass>7.00</Mass>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <tradeability>Never</tradeability>
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>True</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <weaponTags>
+      <li>MechanoidGunMedium</li>
+    </weaponTags>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_5x35mmCharged</projectileDef>
+        <warmupTime>120</warmupTime>
+        <range>120</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>0</magazineSize>
+			<ammoSet>AmmoSet_5x35mmCharged</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+  </ThingDef>
+
+</ThingDefs>

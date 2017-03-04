@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+
+
+
+	<!-- ================== 5.45x39mm Soviet ================== -->
+
+	
+	<ThingDef Name="Base545x39mmSovietBullet" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<speed>148</speed>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef ParentName="Base545x39mmSovietBullet">
+		<defName>Bullet_545x39mmSoviet_FMJ</defName>
+		<label>5.45mm Soviet bullet (FMJ)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetration>0.467</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base545x39mmSovietBullet">
+		<defName>Bullet_545x39mmSoviet_AP</defName>
+		<label>5.45mm Soviet bullet (AP)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageAmountBase>8</damageAmountBase>
+			<armorPenetration>0.579</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="Base545x39mmSovietBullet">
+		<defName>Bullet_545x39mmSoviet_HP</defName>
+		<label>5.45mm Soviet bullet (HP)</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageAmountBase>13</damageAmountBase>
+			<armorPenetration>0.346</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	
+
+</ThingDefs>

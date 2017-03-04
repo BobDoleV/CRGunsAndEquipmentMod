@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+
+  
+  <!-- ========================== SPECIFICS ============================== -->
+
+  <ThingDef ParentName="BaseWeaponBow">
+    <defName>Neo_Atlatl_CRG</defName>
+    <label>Neo_Atlatl_CRG</label>
+    <description>The atlatl is a tool that uses leverage to thrown arrow like spears</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Neo_Atlatl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+	<costList>
+      <WoodLog>35</WoodLog>
+	</costList>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <AimEfficiency>0.35</AimEfficiency>
+      <ShotSpread>1.5</ShotSpread>
+      <SwayFactor>2</SwayFactor>
+      <Bulk>6</Bulk>
+      <Mass>.25</Mass>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>NeolithicRanged</li>
+      <li>CR_Bow</li>
+    </weaponTags>
+	<recipeMaker>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Projectile_GreatArrow_Stone</projectileDef>
+        <warmupTime>1</warmupTime>
+        <range>13</range>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AmmoUser">
+        <ammoSet>AmmoSet_GreatArrow</ammoSet>
+      </li>
+      <li Class="Combat_Realism.CompProperties_FireModes">
+        <aiUseBurstMode>false</aiUseBurstMode>
+        <aiUseAimMode>false</aiUseAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+
+  
+</ThingDefs>

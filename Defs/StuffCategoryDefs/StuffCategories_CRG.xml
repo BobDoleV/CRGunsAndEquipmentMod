@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StuffCategoryDef>
+    <defName>BRFabric_CRG</defName>
+    <label>bullet resistant fabric</label>
+  </StuffCategoryDef>
+
+ </Defs>
