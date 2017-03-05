@@ -430,6 +430,69 @@
     </colorGenerator>
   </ThingDef>
 
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_TribalA</defName>
+    <label>tribalwear</label>
+    <description>A garment crafted without machines using neolithic tools.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/TribalA/TribalA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>35</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <WorkToMake>3200</WorkToMake>
+      <Mass>0.4</Mass>
+      <Insulation_Cold>-10</Insulation_Cold>
+	  <WornWeight>0.4</WornWeight>
+    </statBases>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <worngraphicPath>Things/Pawn/Humanlike/Apparel/TribalA/TribalA</worngraphicPath>
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+      </layers>
+      <commonality>1</commonality>
+      <tags>
+        <li>Tribal</li>
+      </tags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.4,0.3,0.15,1)</only>
+        </li>
+        <li>
+          <weight>15</weight>
+          <only>RGBA(0.6,0.45,0.18,1)</only>
+        </li>
+        <li>
+          <weight>20</weight>
+          <only>RGBA(0.8,0.6,0.23,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+  
   <!-- ============= Armor apparel =================-->
 
   <ThingDef ParentName="ArmorMakeableBase">
