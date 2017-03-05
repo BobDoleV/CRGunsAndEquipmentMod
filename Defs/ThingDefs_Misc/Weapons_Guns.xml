@@ -77,7 +77,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_Pistol</defName>
     <label>M1911</label>
-    <description>Ancient pattern automatic pistol. Weak and short range, but quick.</description>
+    <description>The M1911 is semi-automatic pistol chambered for the .45 ACP cartridge.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Pistol</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -129,7 +129,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_PumpShotgun</defName>
     <label>Remington 870</label>
-    <description>Ancient design. Deadly, but short range.</description>
+    <description>The Remington 870 is a pump-action shotgun used for hunting, and self-defense</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Shotgun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -181,7 +181,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_SurvivalRifle</defName>
     <label>Lee-Enfield</label>
-    <description>Ancient bolt-action rifle. Good range, Good power, low rate of fire.</description>
+    <description>The Lee-Enfield is a 10 shot bolt-action rifle used by the military forces of the British Empire and Commonwealth during the first half of the 20th century. </description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/SurvivalRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -231,7 +231,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_AssaultRifle</defName>
     <label>M16</label>
-    <description>A general-purpose military weapon for field or urban combat. It fires a three-round burst. Good range, low power, high rate of fire.</description>
+    <description>A widely adopted rifle; the M16 is a 5.56x45mm select-fire assult weapon.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -285,7 +285,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_SniperRifle</defName>
     <label>M24</label>
-    <description>Ancient pattern military sniper rifle. Bolt action. Long range, great accuracy and power.</description>
+    <description>The M24 military bolt action sniper rifle chambered in 7.62x51mm.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/SniperRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -336,8 +336,8 @@
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_MachinePistol</defName>
-    <label>UZI</label>
-    <description>A personal defense weapon is a micro-submachine gun. Short range, low power, high rate of fire. Very quick to aim and fire.</description>
+    <label>Uzi</label>
+    <description>A blowback-operated submachine gun.  The Uzi was one of the first weapons to use a telescoping bolt design which allows the magazine to be housed in the pistol grip for a shorter weapon.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/MachinePistol</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -396,7 +396,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_HeavySMG</defName>
     <label>KG-9</label>
-    <description>A compact, wide-caliber slug-thrower. Very short range, but it packs a punch and handles quite well.</description>
+    <description>The KG-9 is open-bolt semi-automatic pistol that is easily converted to full-auto.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/HeavySMG</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -513,7 +513,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_LMG</defName>
     <label>Bren Gun</label>
-    <description>A light machine gun.</description>
+    <description>The Bren gun, was a series of light machine guns made by British.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/LMG</texPath>
       <graphicClass>Graphic_Single</graphicClass>

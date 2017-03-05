@@ -120,7 +120,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_Hi-Power_CRG</defName>
     <label>Hi-Power</label>
-    <description>Ancient pattern automatic pistol. Weak and short range, but quick.</description>
+    <description>Hi Power is a single-action, semi-automatic handgun invented by John Browning</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Gun_Hi-Power</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -276,7 +276,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>Gun_RugerMarkIV_CRG</defName>
     <label>Ruger Mark IV</label>
-    <description>Ancient pattern automatic pistol. Weak and short range, but quick.</description>
+    <description>.22 Long Rifle semi-automatic pistol intended for casual sport and target shooting.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Gun_RugerMarkIV</texPath>
       <graphicClass>Graphic_Single</graphicClass>
