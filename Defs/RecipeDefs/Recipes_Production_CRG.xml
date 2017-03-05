@@ -75,7 +75,7 @@
 			<li>
 				<filter>
 					<categories>
-						<li>Leathery</li>
+						<li>Leathers</li>
 					</categories>
 				</filter>
 				<count>9</count>
@@ -87,7 +87,7 @@
 				<li>Cloth</li>				
 			</thingDefs>
 			<categories>
-				<li>Leathery</li>
+				<li>Leathers</li>
 			</categories>
 		</fixedIngredientFilter>
 		<products>
